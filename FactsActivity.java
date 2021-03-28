@@ -1,14 +1,12 @@
 package com.example.diamondapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import java.util.Random;
 
@@ -41,7 +39,7 @@ public class FactsActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.btn_facts){
+        if(v.getId() == R.id.btn_rdm_fct){
             NextFact(random.nextInt(numberOfFacts));
         }
     }
@@ -49,6 +47,5 @@ public class FactsActivity extends AppCompatActivity implements View.OnClickList
 
     private void NextFact(int num){
             tv_fact.setText(fact.getFact(num));
-
         }
 }
